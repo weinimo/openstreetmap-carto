@@ -1000,7 +1000,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(select way,\n       case when oneway in ('yes','true','1') then 'yes'::text else oneway end as oneway\n       from planet_osm_line\n       where oneway is not null\n         and (highway is not null or railway is not null or waterway is not null)\n         and (bridge is null or bridge not in ('yes','true','1','viaduct'))\n      ) as directions",
+        "table": "(select way,\n       case when oneway in ('yes','true','1') then 'yes'::text else oneway end as oneway\n       from planet_osm_line\n       where oneway is not null\n         and highway in ('motorway','motorway_link','trunk','trunk_link','primary','primary_link','secondary','secondary_link','tertiary','tertiary_link','residential','unclassified','road','service','pedestrian','raceway','living_street','construction')\n         and (bridge is null or bridge not in ('yes','true','1','viaduct'))\n      ) as directions",
         "extent": "-20037508,-19929239,20037508,19929239",
         "key_field": "",
         "geometry_field": "way",
@@ -1069,7 +1069,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "      (select way,\n       case when oneway in ('yes','true','1') then 'yes'::text else oneway end as oneway\n       from planet_osm_line\n       where oneway is not null\n         and (highway is not null or railway is not null or waterway is not null)\n         and bridge in ('yes','true','1','viaduct')\n         and (layer is null or layer in ('-5','-4','-3','-2','-1','0'))\n      ) as directions",
+        "table": "      (select way,\n       case when oneway in ('yes','true','1') then 'yes'::text else oneway end as oneway\n       from planet_osm_line\n       where oneway is not null\n         and highway in ('motorway','motorway_link','trunk','trunk_link','primary','primary_link','secondary','secondary_link','tertiary','tertiary_link','residential','unclassified','road','service','pedestrian','raceway','living_street','construction')\n         and bridge in ('yes','true','1','viaduct')\n         and (layer is null or layer in ('-5','-4','-3','-2','-1','0'))\n      ) as directions",
         "extent": "-20037508,-19929239,20037508,19929239",
         "key_field": "",
         "geometry_field": "way",
@@ -1138,7 +1138,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "      (select way,\n       case when oneway in ('yes','true','1') then 'yes'::text else oneway end as oneway\n       from planet_osm_line\n       where oneway is not null\n         and (highway is not null or railway is not null or waterway is not null)\n         and bridge in ('yes','true','1','viaduct')\n         and layer = '1'\n      ) as directions",
+        "table": "      (select way,\n       case when oneway in ('yes','true','1') then 'yes'::text else oneway end as oneway\n       from planet_osm_line\n       where oneway is not null\n         and highway in ('motorway','motorway_link','trunk','trunk_link','primary','primary_link','secondary','secondary_link','tertiary','tertiary_link','residential','unclassified','road','service','pedestrian','raceway','living_street','construction')\n         and bridge in ('yes','true','1','viaduct')\n         and layer = '1'\n      ) as directions",
         "extent": "-20037508,-19929239,20037508,19929239",
         "key_field": "",
         "geometry_field": "way",
@@ -1207,7 +1207,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "      (select way,\n       case when oneway in ('yes','true','1') then 'yes'::text else oneway end as oneway\n       from planet_osm_line\n       where oneway is not null\n         and (highway is not null or railway is not null or waterway is not null)\n         and bridge in ('yes','true','1','viaduct')\n         and layer = '2'\n      ) as directions",
+        "table": "      (select way,\n       case when oneway in ('yes','true','1') then 'yes'::text else oneway end as oneway\n       from planet_osm_line\n       where oneway is not null\n         and highway in ('motorway','motorway_link','trunk','trunk_link','primary','primary_link','secondary','secondary_link','tertiary','tertiary_link','residential','unclassified','road','service','pedestrian','raceway','living_street','construction')\n         and bridge in ('yes','true','1','viaduct')\n         and layer = '2'\n      ) as directions",
         "extent": "-20037508,-19929239,20037508,19929239",
         "key_field": "",
         "geometry_field": "way",
@@ -1276,7 +1276,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "      (select way,\n       case when oneway in ('yes','true','1') then 'yes'::text else oneway end as oneway\n       from planet_osm_line\n       where oneway is not null\n         and (highway is not null or railway is not null or waterway is not null)\n         and bridge in ('yes','true','1','viaduct')\n         and layer = '3'\n      ) as directions",
+        "table": "      (select way,\n       case when oneway in ('yes','true','1') then 'yes'::text else oneway end as oneway\n       from planet_osm_line\n       where oneway is not null\n         and highway in ('motorway','motorway_link','trunk','trunk_link','primary','primary_link','secondary','secondary_link','tertiary','tertiary_link','residential','unclassified','road','service','pedestrian','raceway','living_street','construction')\n         and bridge in ('yes','true','1','viaduct')\n         and layer = '3'\n      ) as directions",
         "extent": "-20037508,-19929239,20037508,19929239",
         "key_field": "",
         "geometry_field": "way",
@@ -1345,7 +1345,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "     (select way,\n       case when oneway in ('yes','true','1') then 'yes'::text else oneway end as oneway\n       from planet_osm_line\n       where oneway is not null\n         and (highway is not null or railway is not null or waterway is not null)\n         and bridge in ('yes','true','1','viaduct')\n         and layer = '4'\n      ) as directions",
+        "table": "     (select way,\n       case when oneway in ('yes','true','1') then 'yes'::text else oneway end as oneway\n       from planet_osm_line\n       where oneway is not null\n        and highway in ('motorway','motorway_link','trunk','trunk_link','primary','primary_link','secondary','secondary_link','tertiary','tertiary_link','residential','unclassified','road','service','pedestrian','raceway','living_street','construction')\n         and bridge in ('yes','true','1','viaduct')\n         and layer = '4'\n      ) as directions",
         "extent": "-20037508,-19929239,20037508,19929239",
         "key_field": "",
         "geometry_field": "way",
@@ -1414,7 +1414,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "      (select way,\n       case when oneway in ('yes','true','1') then 'yes'::text else oneway end as oneway\n       from planet_osm_line\n       where oneway is not null\n         and (highway is not null or railway is not null or waterway is not null)\n         and bridge in ('yes','true','1','viaduct')\n         and layer = '5'\n      ) as directions",
+        "table": "      (select way,\n       case when oneway in ('yes','true','1') then 'yes'::text else oneway end as oneway\n       from planet_osm_line\n       where oneway is not null\n         and highway in ('motorway','motorway_link','trunk','trunk_link','primary','primary_link','secondary','secondary_link','tertiary','tertiary_link','residential','unclassified','road','service','pedestrian','raceway','living_street','construction')\n         and bridge in ('yes','true','1','viaduct')\n         and layer = '5'\n      ) as directions",
         "extent": "-20037508,-19929239,20037508,19929239",
         "key_field": "",
         "geometry_field": "way",
