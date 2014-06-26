@@ -98,22 +98,26 @@ node,way   denomination text         linear
 node,way   disused      text         linear
 node       ele          text         linear
 node,way   embankment   text         linear
+node,way   fee          text         linear
 node,way   foot         text         linear
 node,way   generator:source    text  linear
 node,way   harbour      text         polygon
 node,way   highway      text         linear
 node,way   historic     text         polygon
 node,way   horse        text         linear
+node,way   information  text         linear
 node,way   intermittent text         linear
 node,way   junction     text         linear
 node,way   landuse      text         polygon
 node,way   layer        text         linear
 node,way   leisure      text         polygon
+node,way   lit          text         linear
 node,way   lock         text         linear
 node,way   man_made     text         polygon
 node,way   military     text         polygon
 node,way   motorcar     text         linear
 node,way   name         text         linear
+node,way   name:de      text         linear
 node,way   natural      text         polygon  # natural=coastline tags are discarded by a hard coded rule in osm2pgsql
 node,way   office       text         polygon
 node,way   oneway       text         linear
@@ -144,6 +148,27 @@ node,way   width        text         linear
 node,way   wood         text         linear
 node,way   z_order      int4         linear # This is calculated during import
 way        way_area     real                # This is calculated during import
+
+# If you're interested in bicycle routes, you may want the following fields
+# To make these work you need slim mode or the necessary data won't be remembered.
+way       lcn_ref      text     linear
+way       rcn_ref      text     linear
+way       ncn_ref      text     linear
+way       lcn          text     linear
+way       rcn          text     linear
+way       ncn          text     linear
+way       lwn_ref      text     linear
+way       rwn_ref      text     linear
+way       nwn_ref      text     linear
+way       lwn          text     linear
+way       rwn          text     linear
+way       nwn          text     linear
+way       route_pref_color text     linear
+way       route_name   text     linear
+way       symbol       text     linear
+way       osmc:symbol  text     linear
+way       marked_trail text     linear
+way       network      text     linear
 
 # Area tags
 # We don't make columns for these tags, but objects with them are areas.
