@@ -132,6 +132,7 @@ node,way   railway      text         linear
 node,way   ref          text         linear
 node,way   religion     text         nocache
 node,way   route        text         linear
+node,way   ruins        text         linear
 node,way   service      text         linear
 node,way   shop         text         polygon
 node,way   sport        text         polygon
