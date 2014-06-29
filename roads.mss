@@ -599,7 +599,7 @@
           line-join: round;
           [zoom >= 15] { line-width: 7; }
         }
-      } 
+      }
     }
   }
 
