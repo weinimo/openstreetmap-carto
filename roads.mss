@@ -15,6 +15,7 @@
 @footway-fill: salmon;
 @steps-fill: @footway-fill;
 @cycleway-fill: blue;
+@skateway-fill: magenta;
 @bridleway-fill: green;
 @track-fill: #996600;
 @aeroway-fill: #bbc;
@@ -1310,6 +1311,38 @@
         }
         line/line-color: @cycleway-fill;
         line/line-dasharray: 1,3;
+        line/line-join: round;
+        line/line-cap: round;
+        .roads-fill {
+          line/line-width: 1.2;
+        }
+        .bridges-fill {
+          [zoom >= 13] { line/line-width: 1.2; }
+          [zoom >= 14] { line/line-width: 1.5; }
+        }
+        .tunnels-fill {
+          line/line-width: 2;
+          line/line-opacity: 0.5;
+        }
+      }
+    }
+
+    [feature = 'highway_cycleway'][smoothness = 'excellent'],
+    [feature = 'highway_path'][bicycle = 'designated'][smoothness = 'excellent'] {
+      [zoom >= 13] {
+        .tunnels-fill {
+          tunnelcasing/line-width: 5.5;
+          tunnelcasing/line-color: @tunnel-casing;
+          tunnelcasing/line-dasharray: 4,2;
+        }
+        .roads-fill, .tunnels-fill {
+          background/line-color: @cycleway-casing;
+          background/line-cap: round;
+          background/line-join: round;
+          background/line-width: 3;
+          .roads-fill { background/line-opacity: 0.4; }
+        }
+        line/line-color: @skateway-fill;
         line/line-join: round;
         line/line-cap: round;
         .roads-fill {
