@@ -135,6 +135,7 @@ node,way   route        text         linear
 node,way   ruins        text         linear
 node,way   service      text         linear
 node,way   shop         text         polygon
+node,way   smoothness   text         linear
 node,way   sport        text         polygon
 node,way   surface      text         linear
 node,way   toll         text         linear
